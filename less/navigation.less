@@ -5,20 +5,14 @@
   background-image: linear-gradient(to right, @gullGray, @sanJuan);
   width: 100vw;
   height: 70px;
-
+  z-index: 1;
   nav {
     width: 20%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     a {
-      .custom-button;
-    }
-
-    span {
-      padding-top: 5px;
-      display: inline-block;
-      transform: rotate(180deg);
+      .custom-button(@altColor, white);
     }
   }
 }

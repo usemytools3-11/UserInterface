@@ -3,7 +3,7 @@ header {
   width: 100vw;
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(to right, @gullGray, @sanJuan);
+  background-image: linear-gradient(to right, @lightBg, @mediumBg);
   
   .header-left{
     img {
@@ -14,7 +14,7 @@ header {
 
   .header-right{
     width: 400px;
-    background-color: @brightGray;
+    background-color: @darkBg;
     border-radius: 15px;
     margin: 10px;
     display: flex;
@@ -27,15 +27,61 @@ header {
       padding-right: 15px;
     }
     button {
-      .custom-button;
-     border: none; 
+      .custom-button(@altColor, white);
+    }
+  }
+}
+
+.carousel {
+  margin: 25px auto 0 auto;
+  max-width: 50%;
+  img {
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 500px !important;
+    width: auto;
+  }
+  .item {
+    button {
+      .custom-button(@altColor, white);
     }
   }
 }
 
 .bottom-banner{
-  img {
-  width: 100px;
-  height: auto;
+  width: 95%; 
+  margin: 25px auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: @darkBg;
+  border-radius: 15px;
+
+  .bottom-banner-left {
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    p {
+      font-size: 2rem;
+      color: white;
+    }
+
+    button {
+      .custom-button(@altColor, white);
+    }
+  }
+
+  .bottom-banner-right {
+    width: 33%;
+
+    img {
+      width: 100%;;
+      height: auto;
+      border-radius: 0 15px 15px 0;
+    }
   }
 }
