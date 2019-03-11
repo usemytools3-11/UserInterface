@@ -6,6 +6,9 @@
   font-weight: bold;
   font-size: 2rem;
 }
+.custom-button:hover {
+  cursor: pointer;
+}
 /* 
   http://meyerweb.com/eric/tools/css/reset/ 
   v2.0 | 20110126
@@ -140,6 +143,11 @@ h1 {
   font-weight: bold;
   color: #D1BD88;
 }
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
 a {
   text-decoration: none;
 }
@@ -165,6 +173,9 @@ a {
   font-weight: bold;
   font-size: 2rem;
 }
+.nav-bar nav a:hover {
+  cursor: pointer;
+}
 .nav-bar nav span {
   padding-top: 5px;
   display: inline-block;
@@ -178,8 +189,35 @@ header {
   background-image: linear-gradient(to right, #98ACB5, #314D69);
 }
 header .header-left img {
-  width: auto;
-  height: 350px;
+  width: 200px;
+  height: auto;
+}
+header .header-right {
+  width: 400px;
+  background-color: #394147;
+  border-radius: 15px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+header .header-right h2 {
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+header .header-right button {
+  background-color: #D1BD88;
+  padding: 2% 4%;
+  border-radius: 500px;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  border: none;
+}
+header .header-right button:hover {
+  cursor: pointer;
 }
 .bottom-banner img {
   width: 100px;

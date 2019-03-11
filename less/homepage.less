@@ -7,17 +7,28 @@ header {
   
   .header-left{
     img {
-      width: auto;
-      height: 350px;
+      width: 200px;
+      height: auto;
     }
   }
 
   .header-right{
-    p {
-      
+    width: 400px;
+    background-color: @brightGray;
+    border-radius: 15px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    h2 {
+      text-align: center; 
+      padding-left: 15px;
+      padding-right: 15px;
     }
     button {
-    
+      .custom-button;
+     border: none; 
     }
   }
 }
