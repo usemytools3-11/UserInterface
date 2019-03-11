@@ -1,5 +1,5 @@
-.custom-button {
-      background-color: @straw;
+.custom-button(@c1, @c2) {
+      background-color: @c1;
       padding: 2% 4%;
       border-radius: 500px;
       color: white;
@@ -7,6 +7,9 @@
       font-size: 2rem;
 
       &:hover {
-        cursor: pointer;
+        background-color: @c2;
+        color: @c1;
+        border: 1px solid @c1;
+        cursor: pointer
       }
 }
