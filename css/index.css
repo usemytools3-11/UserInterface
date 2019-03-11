@@ -1,10 +1,15 @@
-@bright Gray = #394147;
-@straw = #D1BD88;
-@san Juan = #314D69;
-@gull Gray = #98ACB5;
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+.custom-button {
+  background-color: #D1BD88;
+  padding: 2% 4%;
+  border-radius: 500px;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+/* 
+  http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
 */
 html,
 body,
@@ -130,14 +135,53 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-header {
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #D1BD88;
+}
+a {
+  text-decoration: none;
+}
+.nav-bar {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  background-color: #7FFF00;
+  background-image: linear-gradient(to right, #98ACB5, #314D69);
   width: 100vw;
+  height: 70px;
 }
-header nav span {
+.nav-bar nav {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-bar nav a {
+  background-color: #D1BD88;
+  padding: 2% 4%;
+  border-radius: 500px;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.nav-bar nav span {
+  padding-top: 5px;
   display: inline-block;
   transform: rotate(180deg);
+}
+header {
+  padding-top: 70px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to right, #98ACB5, #314D69);
+}
+header .header-left img {
+  width: auto;
+  height: 350px;
+}
+.bottom-banner img {
+  width: 100px;
+  height: auto;
 }

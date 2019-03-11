@@ -1,11 +1,22 @@
-header {
+.nav-bar {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  background-color: #7FFF00;
+  background-image: linear-gradient(to right, @gullGray, @sanJuan);
   width: 100vw;
+  height: 70px;
+
   nav {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a {
+      .custom-button;
+    }
+
     span {
+      padding-top: 5px;
       display: inline-block;
       transform: rotate(180deg);
     }
