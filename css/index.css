@@ -127,6 +127,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.container {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
 h1 {
   font-size: 4rem;
   font-weight: bold;
@@ -140,6 +149,9 @@ h2 {
 a {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: none;
+}
 a:visited {
   color: white;
 }
@@ -150,6 +162,7 @@ a:visited {
   background-image: linear-gradient(to right, #98ACB5, #314D69);
   width: 100vw;
   height: 70px;
+  z-index: 1;
 }
 .nav-bar nav {
   width: 20%;
@@ -164,6 +177,7 @@ a:visited {
   color: white;
   font-weight: bold;
   font-size: 2rem;
+  border: none;
 }
 .nav-bar nav a:hover {
   background-color: white;
@@ -234,7 +248,72 @@ header .header-right button:hover {
   border: 1px solid #D1BD88;
   cursor: pointer;
 }
-.bottom-banner img {
-  width: 100px;
+.carousel {
+  margin: 25px auto 0 auto;
+  max-width: 50%;
+}
+.carousel img {
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  height: 500px !important;
+  width: auto;
+}
+.carousel .item button {
+  background-color: #D1BD88;
+  padding: 2% 4%;
+  border-radius: 500px;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  border: none;
+}
+.carousel .item button:hover {
+  background-color: white;
+  color: #D1BD88;
+  border: 1px solid #D1BD88;
+  cursor: pointer;
+}
+.bottom-banner {
+  width: 95%;
+  margin: 25px auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #394147;
+  border-radius: 15px;
+}
+.bottom-banner .bottom-banner-left {
+  width: 67%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.bottom-banner .bottom-banner-left p {
+  font-size: 2rem;
+  color: white;
+}
+.bottom-banner .bottom-banner-left button {
+  background-color: #D1BD88;
+  padding: 2% 4%;
+  border-radius: 500px;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  border: none;
+}
+.bottom-banner .bottom-banner-left button:hover {
+  background-color: white;
+  color: #D1BD88;
+  border: 1px solid #D1BD88;
+  cursor: pointer;
+}
+.bottom-banner .bottom-banner-right {
+  width: 33%;
+}
+.bottom-banner .bottom-banner-right img {
+  width: 100%;
   height: auto;
+  border-radius: 0 15px 15px 0;
 }
