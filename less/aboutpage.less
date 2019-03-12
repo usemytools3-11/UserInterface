@@ -1,0 +1,46 @@
+.developer-banner {
+  margin: 0 auto 25px auto;
+  width: 90%;
+  background-color: @darkBg;
+  border-radius: 15px;
+  display: flex; 
+  
+  .banner-developer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    color: white;
+
+    ul {
+      width: 15%;
+      display: flex;
+      justify-content: space-around;
+      a {
+        color: white;
+
+        &:hover {
+          color: @altColor;
+        }
+      }
+    }
+  }
+
+  .banner-developer-image {
+    height: 300px;
+    img {
+      border-radius: 0 15px 15px 0;
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.reverse {
+  .banner-developer-image {
+    order: -1;
+    img {
+      border-radius: 15px 0 0 15px;
+    }
+  }
+}

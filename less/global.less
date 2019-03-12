@@ -18,12 +18,21 @@ h2 {
   color: white;
 }
 
+h3 {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.button {
+  .custom-button(@altColor, white);
+}
+
 a {
   text-decoration: none;
+  &:visited {
+    text-decoration: none;
+  }
   &:hover {
     text-decoration: none;
-  } 
-  &:visited {
-    color: white;
   }
 }
