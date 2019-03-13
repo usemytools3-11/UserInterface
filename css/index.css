@@ -127,6 +127,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+body {
+  overflow-x: hidden;
+}
 h1 {
   font-size: 4rem;
   font-weight: bold;
@@ -287,6 +290,11 @@ header .header-right a {
 }
 .about-header {
   padding-top: 99px;
+}
+@media (max-width: 720px) {
+  .about-header {
+    padding-top: 225px;
+  }
 }
 .about-header .about-header-left img {
   background: white;
