@@ -285,6 +285,9 @@ header .header-right a {
 .home-header .header-right h2 {
   margin-bottom: 15px;
 }
+.about-header {
+  padding-top: 99px;
+}
 .about-header .about-header-left img {
   background: white;
   border-radius: 100%;
@@ -393,13 +396,15 @@ footer .copyright {
   margin-bottom: 15px;
 }
 .bottom-banner img {
+  width: 33%;
   height: auto;
-  width: 100%;
   object-fit: cover;
   border-radius: 0 15px 15px 0;
 }
 @media (max-width: 720px) {
   .bottom-banner img {
+    height: auto;
+    width: 100%;
     order: -1;
     border-radius: 15px 15px 0 0;
   }
