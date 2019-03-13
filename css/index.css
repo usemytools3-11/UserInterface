@@ -393,13 +393,15 @@ footer .copyright {
   margin-bottom: 15px;
 }
 .bottom-banner img {
+  width: 33%;
   height: auto;
-  width: 100%;
   object-fit: cover;
   border-radius: 0 15px 15px 0;
 }
 @media (max-width: 720px) {
   .bottom-banner img {
+    height: auto;
+    width: 100%;
     order: -1;
     border-radius: 15px 15px 0 0;
   }
