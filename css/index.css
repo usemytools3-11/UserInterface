@@ -127,15 +127,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.container {
-  margin: 0;
-  padding: 0;
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 100%;
-  }
-}
 h1 {
   font-size: 4rem;
   font-weight: bold;
@@ -155,13 +146,14 @@ p {
 }
 .button {
   background-color: #D1BD88;
-  padding: 2% 4%;
+  padding: 10px 20px;
   border-radius: 500px;
   color: white;
   font-weight: bold;
   font-size: 2rem;
   border: none;
   text-decoration: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 .button:hover {
   background-color: white;
@@ -184,8 +176,10 @@ a:hover {
   position: fixed;
   background-image: linear-gradient(to right, #98ACB5, #314D69);
   width: 100vw;
-  height: 70px;
   z-index: 1;
+}
+.nav-bar h1 {
+  padding: 15px;
 }
 .nav-bar nav {
   width: 30%;
@@ -195,13 +189,14 @@ a:hover {
 }
 .nav-bar nav a {
   background-color: #D1BD88;
-  padding: 2% 4%;
+  padding: 10px 20px;
   border-radius: 500px;
   color: white;
   font-weight: bold;
   font-size: 2rem;
   border: none;
   text-decoration: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 .nav-bar nav a:hover {
   background-color: white;
@@ -209,8 +204,32 @@ a:hover {
   border: 1px solid #D1BD88;
   cursor: pointer;
 }
+@media (max-width: 1100px) {
+  .nav-bar nav {
+    width: 50%;
+  }
+}
+@media (max-width: 680px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px white solid;
+  }
+  .nav-bar nav {
+    flex-direction: column;
+  }
+  .nav-bar nav a {
+    text-align: center;
+    width: 100vw;
+    border-radius: 0;
+    border-top: 2px white solid;
+  }
+  .nav-bar nav a:hover {
+    border: white;
+  }
+}
 header {
-  padding-top: 70px;
+  padding-top: 79px;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -244,6 +263,24 @@ header .header-right p {
 }
 header .header-right a {
   margin-bottom: 15px;
+}
+@media (max-width: 680px) {
+  header {
+    padding-top: 225px;
+    padding-bottom: 15px;
+    display: block;
+  }
+  header .header-left {
+    display: none;
+  }
+  header .header-right {
+    margin: auto;
+  }
+}
+@media (max-width: 825px) {
+  .home-header .header-left img:last-child {
+    display: none;
+  }
 }
 .home-header .header-right h2 {
   margin-bottom: 15px;
@@ -307,6 +344,11 @@ footer .copyright {
 .carousel #search-for-it a:hover {
   text-decoration: none;
 }
+@media (max-width: 1100px) {
+  .carousel {
+    display: none;
+  }
+}
 .bottom-banner {
   width: 95%;
   margin: 25px auto;
@@ -314,6 +356,7 @@ footer .copyright {
   justify-content: space-between;
   background-color: #394147;
   border-radius: 15px;
+  height: 300px;
 }
 .bottom-banner .bottom-banner-left {
   width: 67%;
@@ -322,17 +365,21 @@ footer .copyright {
   align-items: center;
   justify-content: space-around;
 }
+.bottom-banner .bottom-banner-left h2 {
+  margin-top: 15px;
+}
 .bottom-banner .bottom-banner-left p {
   padding: 15px;
   font-size: 2rem;
   color: white;
 }
-.bottom-banner .bottom-banner-right {
-  width: 33%;
+.bottom-banner .bottom-banner-left .button {
+  margin-bottom: 15px;
 }
-.bottom-banner .bottom-banner-right img {
-  width: 100%;
-  height: auto;
+.bottom-banner img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
   border-radius: 0 15px 15px 0;
 }
 .developer-banner {

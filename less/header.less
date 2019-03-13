@@ -1,5 +1,5 @@
 header {
-  padding-top: 70px;
+  padding-top: 79px;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -40,9 +40,30 @@ header {
       margin-bottom: 15px;
     }
   }
+
+  @media @mobile {
+    padding-top: 225px;
+    padding-bottom: 15px;
+    display: block;
+    
+    .header-left {
+      display: none;
+    }
+
+    .header-right{ 
+      margin: auto;
+    }
+  }
 }
 
 .home-header {
+  .header-left{
+    img:last-child {
+      @media (max-width: 825px) {
+        display: none;
+      }
+    }
+  }
   .header-right{
     h2 {
       margin-bottom: 15px; 

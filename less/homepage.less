@@ -19,6 +19,10 @@
       } 
     } 
   }
+
+  @media @tablet {
+    display: none;
+  }
 }
 
 .bottom-banner{
@@ -28,6 +32,7 @@
   justify-content: space-between;
   background-color: @darkBg;
   border-radius: 15px;
+  height: 300px;
 
   .bottom-banner-left {
     width: 67%;
@@ -36,20 +41,25 @@
     align-items: center;
     justify-content: space-around;
 
+    h2{
+      margin-top: 15px;
+    }
+
     p {
       padding: 15px;
       font-size: 2rem;
       color: white;
     }
+
+    .button {
+      margin-bottom: 15px;
+    }
   }
 
-  .bottom-banner-right {
-    width: 33%;
-
-    img {
-      width: 100%;;
-      height: auto;
-      border-radius: 0 15px 15px 0;
-    }
+  img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    border-radius: 0 15px 15px 0;
   }
 }
