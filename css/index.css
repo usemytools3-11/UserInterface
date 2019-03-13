@@ -150,6 +150,9 @@ h3 {
   font-size: 1.5rem;
   font-style: italic;
 }
+p {
+  line-height: 1.5;
+}
 .button {
   background-color: #D1BD88;
   padding: 2% 4%;
@@ -206,6 +209,50 @@ a:hover {
   border: 1px solid #D1BD88;
   cursor: pointer;
 }
+header {
+  padding-top: 70px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to right, #98ACB5, #314D69);
+  align-items: center;
+  margin-bottom: 25px;
+}
+header .header-left img {
+  width: 200px;
+  height: auto;
+}
+header .header-right {
+  width: 400px;
+  background-color: #394147;
+  border-radius: 15px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+header .header-right h2 {
+  text-align: center;
+  margin-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+header .header-right p {
+  padding: 15px;
+  color: white;
+}
+header .header-right a {
+  margin-bottom: 15px;
+}
+.home-header .header-right h2 {
+  margin-bottom: 15px;
+}
+.about-header .about-header-left img {
+  background: white;
+  border-radius: 100%;
+  padding: 10px;
+}
 footer {
   width: 100vw;
   background-color: #314D69;
@@ -233,32 +280,6 @@ footer ul a:hover {
 footer .copyright {
   font-size: 1rem;
   font-weight: bold;
-}
-header {
-  padding-top: 70px;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  background-image: linear-gradient(to right, #98ACB5, #314D69);
-}
-header .header-left img {
-  width: 200px;
-  height: auto;
-}
-header .header-right {
-  width: 400px;
-  background-color: #394147;
-  border-radius: 15px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-header .header-right h2 {
-  text-align: center;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 .carousel {
   margin: 25px auto 0 auto;
@@ -322,34 +343,34 @@ header .header-right h2 {
   display: flex;
 }
 .developer-banner .banner-developer-text {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 15px;
   color: white;
+  width: auto;
 }
 .developer-banner .banner-developer-text ul {
   width: 15%;
   display: flex;
   justify-content: space-around;
 }
-.developer-banner .banner-developer-text ul a {
+.developer-banner .banner-developer-text ul a i {
   color: white;
+  width: 100%;
+  height: auto;
 }
 .developer-banner .banner-developer-text ul a:hover {
   color: #D1BD88;
 }
-.developer-banner .banner-developer-image {
-  height: 300px;
-}
-.developer-banner .banner-developer-image img {
+.developer-banner img {
   border-radius: 0 15px 15px 0;
-  height: 100%;
+  max-height: 300px;
+  height: auto;
   width: auto;
 }
-.reverse .banner-developer-image {
+.reverse img {
   order: -1;
-}
-.reverse .banner-developer-image img {
   border-radius: 15px 0 0 15px;
 }
