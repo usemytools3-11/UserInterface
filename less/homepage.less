@@ -1,34 +1,3 @@
-header {
-  padding-top: 70px;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  background-image: linear-gradient(to right, @lightBg, @mediumBg);
-  
-  .header-left{
-    img {
-      width: 200px;
-      height: auto;
-    }
-  }
-
-  .header-right{
-    width: 400px;
-    background-color: @darkBg;
-    border-radius: 15px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    h2 {
-      text-align: center; 
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-  }
-}
-
 .carousel {
   margin: 25px auto 0 auto;
   max-width: 50%;
@@ -50,6 +19,10 @@ header {
       } 
     } 
   }
+
+  @media @tablet {
+    display: none;
+  }
 }
 
 .bottom-banner{
@@ -59,28 +32,52 @@ header {
   justify-content: space-between;
   background-color: @darkBg;
   border-radius: 15px;
+  max-height: 300px;
 
+  @media @mobile {
+    flex-direction: column;
+    max-height: 100%;
+  }
   .bottom-banner-left {
     width: 67%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    
+    @media @mobile {
+      width: 100%;
+    }
+
+    h2{
+      margin-top: 15px;
+
+      @media @tablet {
+        display: none;
+      }
+    }
 
     p {
       padding: 15px;
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: white;
+    }
+
+    .button {
+      margin-bottom: 15px;
     }
   }
 
-  .bottom-banner-right {
-    width: 33%;
+  img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0 15px 15px 0;
 
-    img {
-      width: 100%;;
-      height: auto;
-      border-radius: 0 15px 15px 0;
+    @media @mobile {
+      order: -1; 
+      border-radius: 15px 15px 0 0; 
     }
+
   }
 }

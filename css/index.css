@@ -127,15 +127,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.container {
-  margin: 0;
-  padding: 0;
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 100%;
-  }
-}
 h1 {
   font-size: 4rem;
   font-weight: bold;
@@ -150,15 +141,19 @@ h3 {
   font-size: 1.5rem;
   font-style: italic;
 }
+p {
+  line-height: 1.5;
+}
 .button {
   background-color: #D1BD88;
-  padding: 2% 4%;
+  padding: 10px 20px;
   border-radius: 500px;
   color: white;
   font-weight: bold;
   font-size: 2rem;
   border: none;
   text-decoration: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 .button:hover {
   background-color: white;
@@ -181,8 +176,10 @@ a:hover {
   position: fixed;
   background-image: linear-gradient(to right, #98ACB5, #314D69);
   width: 100vw;
-  height: 70px;
   z-index: 1;
+}
+.nav-bar h1 {
+  padding: 15px;
 }
 .nav-bar nav {
   width: 30%;
@@ -192,19 +189,106 @@ a:hover {
 }
 .nav-bar nav a {
   background-color: #D1BD88;
-  padding: 2% 4%;
+  padding: 10px 20px;
   border-radius: 500px;
   color: white;
   font-weight: bold;
   font-size: 2rem;
   border: none;
   text-decoration: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 .nav-bar nav a:hover {
   background-color: white;
   color: #D1BD88;
   border: 1px solid #D1BD88;
   cursor: pointer;
+}
+@media (max-width: 1100px) {
+  .nav-bar nav {
+    width: 50%;
+  }
+}
+@media (max-width: 720px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px white solid;
+  }
+  .nav-bar nav {
+    flex-direction: column;
+  }
+  .nav-bar nav a {
+    text-align: center;
+    width: 100vw;
+    border-radius: 0;
+    border-top: 2px white solid;
+  }
+  .nav-bar nav a:hover {
+    border: white;
+  }
+}
+header {
+  padding-top: 79px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to right, #98ACB5, #314D69);
+  align-items: center;
+  margin-bottom: 25px;
+}
+header .header-left img {
+  width: 200px;
+  height: auto;
+}
+header .header-right {
+  width: 400px;
+  background-color: #394147;
+  border-radius: 15px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+header .header-right h2 {
+  text-align: center;
+  margin-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+header .header-right p {
+  padding: 15px;
+  color: white;
+}
+header .header-right a {
+  margin-bottom: 15px;
+}
+@media (max-width: 720px) {
+  header {
+    padding-top: 225px;
+    padding-bottom: 15px;
+    display: block;
+  }
+  header .header-left {
+    display: none;
+  }
+  header .header-right {
+    margin: auto;
+  }
+}
+@media (max-width: 825px) {
+  .home-header .header-left img:last-child {
+    display: none;
+  }
+}
+.home-header .header-right h2 {
+  margin-bottom: 15px;
+}
+.about-header .about-header-left img {
+  background: white;
+  border-radius: 100%;
+  padding: 10px;
 }
 footer {
   width: 100vw;
@@ -234,32 +318,6 @@ footer .copyright {
   font-size: 1rem;
   font-weight: bold;
 }
-header {
-  padding-top: 70px;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  background-image: linear-gradient(to right, #98ACB5, #314D69);
-}
-header .header-left img {
-  width: 200px;
-  height: auto;
-}
-header .header-right {
-  width: 400px;
-  background-color: #394147;
-  border-radius: 15px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-header .header-right h2 {
-  text-align: center;
-  padding-left: 15px;
-  padding-right: 15px;
-}
 .carousel {
   margin: 25px auto 0 auto;
   max-width: 50%;
@@ -286,6 +344,11 @@ header .header-right h2 {
 .carousel #search-for-it a:hover {
   text-decoration: none;
 }
+@media (max-width: 1100px) {
+  .carousel {
+    display: none;
+  }
+}
 .bottom-banner {
   width: 95%;
   margin: 25px auto;
@@ -293,6 +356,13 @@ header .header-right h2 {
   justify-content: space-between;
   background-color: #394147;
   border-radius: 15px;
+  max-height: 300px;
+}
+@media (max-width: 720px) {
+  .bottom-banner {
+    flex-direction: column;
+    max-height: 100%;
+  }
 }
 .bottom-banner .bottom-banner-left {
   width: 67%;
@@ -301,18 +371,38 @@ header .header-right h2 {
   align-items: center;
   justify-content: space-around;
 }
+@media (max-width: 720px) {
+  .bottom-banner .bottom-banner-left {
+    width: 100%;
+  }
+}
+.bottom-banner .bottom-banner-left h2 {
+  margin-top: 15px;
+}
+@media (max-width: 1100px) {
+  .bottom-banner .bottom-banner-left h2 {
+    display: none;
+  }
+}
 .bottom-banner .bottom-banner-left p {
   padding: 15px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
 }
-.bottom-banner .bottom-banner-right {
-  width: 33%;
+.bottom-banner .bottom-banner-left .button {
+  margin-bottom: 15px;
 }
-.bottom-banner .bottom-banner-right img {
-  width: 100%;
+.bottom-banner img {
   height: auto;
+  width: 100%;
+  object-fit: cover;
   border-radius: 0 15px 15px 0;
+}
+@media (max-width: 720px) {
+  .bottom-banner img {
+    order: -1;
+    border-radius: 15px 15px 0 0;
+  }
 }
 .developer-banner {
   margin: 0 auto 25px auto;
@@ -322,34 +412,45 @@ header .header-right h2 {
   display: flex;
 }
 .developer-banner .banner-developer-text {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 15px;
   color: white;
+  width: auto;
 }
 .developer-banner .banner-developer-text ul {
   width: 15%;
   display: flex;
   justify-content: space-around;
+  margin-top: 15px;
 }
-.developer-banner .banner-developer-text ul a {
+@media (max-width: 1100px) {
+  .developer-banner .banner-developer-text ul {
+    width: 100%;
+  }
+}
+.developer-banner .banner-developer-text ul a i {
   color: white;
+  width: 100%;
+  height: auto;
 }
 .developer-banner .banner-developer-text ul a:hover {
   color: #D1BD88;
 }
-.developer-banner .banner-developer-image {
-  height: 300px;
-}
-.developer-banner .banner-developer-image img {
+.developer-banner img {
   border-radius: 0 15px 15px 0;
-  height: 100%;
+  max-height: 300px;
+  height: auto;
   width: auto;
 }
-.reverse .banner-developer-image {
-  order: -1;
+@media (max-width: 720px) {
+  .developer-banner img {
+    display: none;
+  }
 }
-.reverse .banner-developer-image img {
+.reverse img {
+  order: -1;
   border-radius: 15px 0 0 15px;
 }
