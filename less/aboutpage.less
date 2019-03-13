@@ -18,6 +18,12 @@
       width: 15%;
       display: flex;
       justify-content: space-around;
+      margin-top: 15px;
+
+      @media @tablet {
+        width: 100%;
+      }
+      
       a {
         i {
           color: white;
@@ -37,6 +43,10 @@
     max-height: 300px;
     height: auto;
     width: auto;
+    
+    @media @mobile {
+      display: none;
+    }
   }
 }
 
