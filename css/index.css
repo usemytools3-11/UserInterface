@@ -285,6 +285,9 @@ header .header-right a {
 .home-header .header-right h2 {
   margin-bottom: 15px;
 }
+.about-header {
+  padding-top: 99px;
+}
 .about-header .about-header-left img {
   background: white;
   border-radius: 100%;
