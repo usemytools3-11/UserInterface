@@ -209,7 +209,7 @@ a:hover {
     width: 50%;
   }
 }
-@media (max-width: 680px) {
+@media (max-width: 720px) {
   .nav-bar {
     flex-direction: column;
     align-items: center;
@@ -264,7 +264,7 @@ header .header-right p {
 header .header-right a {
   margin-bottom: 15px;
 }
-@media (max-width: 680px) {
+@media (max-width: 720px) {
   header {
     padding-top: 225px;
     padding-bottom: 15px;
@@ -356,7 +356,13 @@ footer .copyright {
   justify-content: space-between;
   background-color: #394147;
   border-radius: 15px;
-  height: 300px;
+  max-height: 300px;
+}
+@media (max-width: 720px) {
+  .bottom-banner {
+    flex-direction: column;
+    max-height: 100%;
+  }
 }
 .bottom-banner .bottom-banner-left {
   width: 67%;
@@ -365,22 +371,38 @@ footer .copyright {
   align-items: center;
   justify-content: space-around;
 }
+@media (max-width: 720px) {
+  .bottom-banner .bottom-banner-left {
+    width: 100%;
+  }
+}
 .bottom-banner .bottom-banner-left h2 {
   margin-top: 15px;
 }
+@media (max-width: 1100px) {
+  .bottom-banner .bottom-banner-left h2 {
+    display: none;
+  }
+}
 .bottom-banner .bottom-banner-left p {
   padding: 15px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
 }
 .bottom-banner .bottom-banner-left .button {
   margin-bottom: 15px;
 }
 .bottom-banner img {
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 100%;
   object-fit: cover;
   border-radius: 0 15px 15px 0;
+}
+@media (max-width: 720px) {
+  .bottom-banner img {
+    order: -1;
+    border-radius: 15px 15px 0 0;
+  }
 }
 .developer-banner {
   margin: 0 auto 25px auto;

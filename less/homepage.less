@@ -32,22 +32,34 @@
   justify-content: space-between;
   background-color: @darkBg;
   border-radius: 15px;
-  height: 300px;
+  max-height: 300px;
 
+  @media @mobile {
+    flex-direction: column;
+    max-height: 100%;
+  }
   .bottom-banner-left {
     width: 67%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    
+    @media @mobile {
+      width: 100%;
+    }
 
     h2{
       margin-top: 15px;
+
+      @media @tablet {
+        display: none;
+      }
     }
 
     p {
       padding: 15px;
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: white;
     }
 
@@ -57,9 +69,15 @@
   }
 
   img {
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
     object-fit: cover;
     border-radius: 0 15px 15px 0;
+
+    @media @mobile {
+      order: -1; 
+      border-radius: 15px 15px 0 0; 
+    }
+
   }
 }
