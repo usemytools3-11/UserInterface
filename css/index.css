@@ -127,6 +127,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
 h1 {
   font-size: 4rem;
   font-weight: bold;
@@ -174,9 +180,15 @@ a:hover {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  background-image: linear-gradient(to right, #98ACB5, #314D69);
+  background-color: #314D69;
   width: 100vw;
   z-index: 1;
+}
+@media (max-width: 720px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .nav-bar h1 {
   padding: 15px;
@@ -186,6 +198,16 @@ a:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+@media (max-width: 1100px) {
+  .nav-bar nav {
+    width: 50%;
+  }
+}
+@media (max-width: 720px) {
+  .nav-bar nav {
+    flex-direction: column;
+  }
 }
 .nav-bar nav a {
   background-color: #D1BD88;
@@ -204,38 +226,34 @@ a:hover {
   border: 1px solid #D1BD88;
   cursor: pointer;
 }
-@media (max-width: 1100px) {
-  .nav-bar nav {
-    width: 50%;
-  }
+.nav-bar nav a:hover {
+  border: white;
 }
 @media (max-width: 720px) {
-  .nav-bar {
-    flex-direction: column;
-    align-items: center;
-    border-bottom: 2px white solid;
-  }
-  .nav-bar nav {
-    flex-direction: column;
-  }
   .nav-bar nav a {
     text-align: center;
     width: 100vw;
     border-radius: 0;
-    border-top: 2px white solid;
-  }
-  .nav-bar nav a:hover {
-    border: white;
   }
 }
 header {
-  padding-top: 79px;
   width: 100vw;
   display: flex;
   justify-content: center;
   background-image: linear-gradient(to right, #98ACB5, #314D69);
   align-items: center;
   margin-bottom: 25px;
+}
+@media (max-width: 720px) {
+  header {
+    padding-bottom: 15px;
+    display: block;
+  }
+}
+@media (max-width: 720px) {
+  header .header-left {
+    display: none;
+  }
 }
 header .header-left img {
   width: 200px;
@@ -251,6 +269,12 @@ header .header-right {
   align-items: center;
   justify-content: space-around;
 }
+@media (max-width: 720px) {
+  header .header-right {
+    width: 95%;
+    margin: auto;
+  }
+}
 header .header-right h2 {
   text-align: center;
   margin-top: 15px;
@@ -264,17 +288,12 @@ header .header-right p {
 header .header-right a {
   margin-bottom: 15px;
 }
+.home-header {
+  padding-top: 95px;
+}
 @media (max-width: 720px) {
-  header {
+  .home-header {
     padding-top: 225px;
-    padding-bottom: 15px;
-    display: block;
-  }
-  header .header-left {
-    display: none;
-  }
-  header .header-right {
-    margin: auto;
   }
 }
 @media (max-width: 825px) {
@@ -287,6 +306,11 @@ header .header-right a {
 }
 .about-header {
   padding-top: 99px;
+}
+@media (max-width: 720px) {
+  .about-header {
+    padding-top: 225px;
+  }
 }
 .about-header .about-header-left img {
   background: white;
@@ -323,15 +347,20 @@ footer .copyright {
 }
 .carousel {
   margin: 25px auto 0 auto;
-  max-width: 50%;
+  max-width: 80%;
+}
+@media (max-width: 720px) {
+  .carousel {
+    display: none;
+  }
 }
 .carousel .carousel-inner > .item > a > img,
 .carousel .carousel-inner > .item > img,
 .carousel .img-responsive,
 .carousel .thumbnail a > img,
 .carousel .thumbnail > img {
-  height: 500px;
   width: 100%;
+  height: auto;
 }
 .carousel #search-for-it {
   height: 100%;
@@ -346,11 +375,6 @@ footer .copyright {
 }
 .carousel #search-for-it a:hover {
   text-decoration: none;
-}
-@media (max-width: 1100px) {
-  .carousel {
-    display: none;
-  }
 }
 .bottom-banner {
   width: 95%;
@@ -395,14 +419,13 @@ footer .copyright {
 .bottom-banner .bottom-banner-left .button {
   margin-bottom: 15px;
 }
-.bottom-banner img {
+.bottom-banner .bottom-banner-img {
   width: 33%;
-  height: auto;
   object-fit: cover;
   border-radius: 0 15px 15px 0;
 }
 @media (max-width: 720px) {
-  .bottom-banner img {
+  .bottom-banner .bottom-banner-img {
     height: auto;
     width: 100%;
     order: -1;
@@ -441,7 +464,7 @@ footer .copyright {
   width: 100%;
   height: auto;
 }
-.developer-banner .banner-developer-text ul a:hover {
+.developer-banner .banner-developer-text ul a i:hover {
   color: #D1BD88;
 }
 .developer-banner img {
