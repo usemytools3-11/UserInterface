@@ -1,13 +1,21 @@
 header {
-  padding-top: 79px;
   width: 100vw;
   display: flex;
   justify-content: center;
   background-image: linear-gradient(to right, @lightBg, @mediumBg);
   align-items: center;
   margin-bottom: 25px;
+  
+  @media @mobile {
+    padding-bottom: 15px;
+    display: block;
+  }
 
   .header-left{
+    @media @mobile {
+      display: none;
+    }
+
     img {
       width: 200px;
       height: auto;
@@ -23,6 +31,11 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    
+    @media @mobile {
+      width: 95%;
+      margin: auto;
+    }
     
     h2 {
       text-align: center; 
@@ -40,23 +53,15 @@ header {
       margin-bottom: 15px;
     }
   }
-
-  @media @mobile {
-    padding-top: 225px;
-    padding-bottom: 15px;
-    display: block;
-    
-    .header-left {
-      display: none;
-    }
-
-    .header-right{ 
-      margin: auto;
-    }
-  }
 }
 
 .home-header {
+  padding-top: 95px;
+
+  @media @mobile {
+    padding-top: 225px;
+  }
+
   .header-left{
     img:last-child {
       @media (max-width: 825px) {
