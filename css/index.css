@@ -245,13 +245,19 @@ header {
   display: flex;
   justify-content: center;
   margin-bottom: 25px;
+  min-height: 365px;
   width: 100vw;
+  height: 30vw;
 }
 @media (max-width: 720px) {
   header {
     display: block;
+    height: auto;
     padding-bottom: 15px;
   }
+}
+header .header-left {
+  height: 100%;
 }
 @media (max-width: 720px) {
   header .header-left {
@@ -259,8 +265,16 @@ header {
   }
 }
 header .header-left img {
-  height: auto;
-  width: 200px;
+  border-radius: 25px;
+  height: 100%;
+  object-fit: cover;
+  max-width: 307px;
+  padding: 10px 0 10px 0;
+}
+@media (max-width: 1100px) {
+  header .header-left img:first-child {
+    display: none;
+  }
 }
 header .header-right {
   align-items: center;
@@ -268,6 +282,7 @@ header .header-right {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
+  height: 90%;
   justify-content: space-around;
   margin: 10px;
   width: 400px;

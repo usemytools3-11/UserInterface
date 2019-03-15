@@ -4,21 +4,35 @@ header {
   display: flex;
   justify-content: center;
   margin-bottom: 25px;
+  min-height: 365px;
   width: 100vw;
-  
+  height: 30vw; 
+
   @media @mobile {
     display: block;
+    height: auto;
     padding-bottom: 15px;
   }
 
   .header-left{
+    height: 100%; 
+
     @media @mobile {
       display: none;
     }
-
+    
     img {
-      height: auto;
-      width: 200px;
+      border-radius: 25px;
+      height: 100%;
+      object-fit: cover;
+      max-width: 307px;
+      padding: 10px 0 10px 0;
+    }
+
+    img:first-child {
+      @media @tablet {
+        display: none;
+      }
     }
   }
 
@@ -28,6 +42,7 @@ header {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+    height: 90%;
     justify-content: space-around;
     margin: 10px;
     width: 400px;
