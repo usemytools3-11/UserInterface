@@ -1,37 +1,63 @@
 .developer-banner {
-  margin: 0 auto 25px auto;
-  width: 90%;
   background-color: @darkBg;
   border-radius: 15px;
   display: flex;
+  margin: 0 auto 25px auto;
+  width: 90%;
   
-  .banner-developer-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px;
+  @media @mobile {
+    border-radius: 0;
+    margin: 0 auto 0 auto;
+    width: 100%;
+  }
+
+  .banner-text {
     color: white;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 15px;
     width: auto;
 
-    ul {
-      width: 15%;
-      display: flex;
-      justify-content: space-around;
-      margin-top: 15px;
-
-      @media @tablet {
-        width: 100%;
+    h2 {
+      @media @mobile {
+        text-align: center;
       }
-      
-      a {
-        i {
-          color: white;
-          width: 100%;
-          height: auto;
+    }
+    
+    .expand-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%; 
+      justify-content: space-between;
 
-          &:hover {
-            color: @altColor;
+      .developer-description {
+        h3 {
+          @media @mobile {
+            text-align: center;
+          }
+        }
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-around;
+        width: 15%;
+        
+        @media @tablet {
+          width: 100%;
+        }
+        
+        a {
+    
+          i {
+            color: white;
+            height: auto;
+            width: 100%;
+
+            &:hover {
+              color: @altColor;
+            }
           }
         }
       }
@@ -40,8 +66,8 @@
 
   img {
     border-radius: 0 15px 15px 0;
-    max-height: 300px;
     height: auto;
+    max-height: 300px;
     width: auto;
     
     @media @mobile {
@@ -52,7 +78,11 @@
 
 .reverse {
   img {
-    order: -1;
     border-radius: 15px 0 0 15px;
+    order: -1;
   }
+}
+
+.temporary-hide { 
+  display: none !important;
 }
