@@ -1,6 +1,7 @@
 .carousel {
   margin: 25px auto 0 auto;
   max-width:80%;
+  
   @media @mobile {
     display: none;
   }
@@ -11,11 +12,11 @@
   }
   
   #search-for-it {
-    height: 100%;
+    align-items: center;
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: center;
-    align-items: center;
   
     a{
       margin: 15px 0;
@@ -29,13 +30,13 @@
 }
 
 .bottom-banner{
-  width: 95%; 
-  margin: 25px auto;
-  display: flex;
-  justify-content: space-between;
   background-color: @darkBg;
   border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin: 25px auto;
   max-height: 300px;
+  width: 95%; 
 
   @media @mobile {
     flex-direction: column;
@@ -43,11 +44,11 @@
   }
   
   .bottom-banner-left {
-    width: 67%;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-around;
+    width: 67%;
     
     @media @mobile {
       width: 100%;
@@ -62,9 +63,9 @@
     }
 
     p {
-      padding: 15px;
-      font-size: 1.5rem;
       color: white;
+      font-size: 1.5rem;
+      padding: 15px;
     }
 
     .button {
@@ -73,15 +74,15 @@
   }
 
   .bottom-banner-img {
-    width: 33%;
-    object-fit: cover;
     border-radius: 0 15px 15px 0;
+    object-fit: cover;
+    width: 33%;
 
     @media @mobile {
-      height: auto;
-      width: 100%;
-      order: -1; 
       border-radius: 15px 15px 0 0; 
+      height: auto;
+      order: -1; 
+      width: 100%;
     }
   }
 }

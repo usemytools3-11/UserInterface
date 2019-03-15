@@ -1,15 +1,15 @@
 .nav-bar {
+  background-color: @sanJuan;
   display: flex;
   justify-content: space-between;
   position: fixed;
-  background-color: @sanJuan;
   width: 100vw;
   z-index: 1;
   
   @media @mobile {
-    flex-direction: column;
     align-items: center;
-    //border-bottom: 2px white solid;
+    border-bottom: 2px white solid;
+    flex-direction: column;
   }
 
   h1 {
@@ -17,10 +17,10 @@
   }
 
   nav {
-    width: 30%;
+    align-items: center;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    width: 30%;
 
     @media @tablet {
       width: 50%;
@@ -32,6 +32,7 @@
 
     a {
       .custom-button(@altColor, white);
+      margin: 0 5px 0 5px;
       
       &:hover {
         border: white;
@@ -41,7 +42,7 @@
         text-align: center;
         width: 100vw;
         border-radius: 0;
-        //border-top: 2px white solid;
+        border-top: 2px white solid;
       }
     } 
   }

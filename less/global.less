@@ -7,15 +7,15 @@ body {
 }
 
 h1 {
+  color: #D1BD88;
   font-size: 4rem;
   font-weight: bold;
-  color: #D1BD88;
 }
 
 h2 {
+  color: white;
   font-size: 3rem;
   font-weight: bold;
-  color: white;
 }
 
 h3 {
@@ -27,16 +27,18 @@ p{
   line-height: 1.5;
 }
 
-.button {
-  .custom-button(@altColor, white);
-}
-
 a {
   text-decoration: none;
+
   &:visited {
     text-decoration: none;
   }
+
   &:hover {
     text-decoration: none;
   }
+}
+
+.button {
+  .custom-button(@altColor, white);
 }

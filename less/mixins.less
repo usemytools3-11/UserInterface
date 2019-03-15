@@ -1,18 +1,18 @@
 .custom-button(@c1, @c2) {
       background-color: @c1;
-      padding: 10px 20px;
+      border: none;
       border-radius: 500px;
       color: @c2;
-      font-weight: bold;
       font-size: 2rem;
-      border: none;
+      font-weight: bold;
+      padding: 10px 20px;
       text-decoration: none;
-      text-shadow: 0 1px 2px rgba(0,0,0,.6);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 
       &:hover {
         background-color: @c2;
-        color: @c1;
         border: 1px solid @c1;
-        cursor: pointer
+        color: @c1;
+        cursor: pointer;
       }
 }
